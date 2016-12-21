@@ -1,4 +1,4 @@
-package com.team503.lib.util;
+package ultrasonic;
 
 import edu.wpi.first.wpilibj.AnalogInput;
 /*=============================================================
@@ -18,6 +18,7 @@ public class LVMaxSonarEZ4
 		analogSensor = new AnalogInput(port);
 	}
 	//This next method has not been tested yet
+	//Double check please!
 	public double getDistance()
 	{
 		return analogSensor.getVoltage()/VOLTS_PER_INCH;
