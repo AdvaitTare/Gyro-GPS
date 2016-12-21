@@ -1,12 +1,12 @@
 package ultrasonic;
 
 import edu.wpi.first.wpilibj.AnalogInput;
-/*=============================================================
+/**=============================================================
  * +--------------------+--------------+
- * | LVMaxSonarEZ4.java | FRC Team 503 |
+ * | UltrasonicSensor.java | FRC Team 503 |
  * +--------------------+--------------+
  * 
- * This is the code for the ultrasonic sensors
+ * This is the code for the ultrasonic sensors of type LVMaxSonarEZ4.
  *=============================================================*/
 public class UltrasonicSensor {
 	private final double VOLTS_PER_INCH = 0.009766;

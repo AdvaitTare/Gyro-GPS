@@ -4,6 +4,11 @@ import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.SPI;
 
+/**
+ * Class that represents the NavX MXP navigation sensor.
+ * @author Owner
+ *
+ */
 public class NavXGyro{  
     // Abstracted methods for Nav X Gyro
     private static AHRS ahrs;
