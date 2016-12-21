@@ -15,9 +15,9 @@ public class LVMaxSonarEZ4 {
 	public LVMaxSonarEZ4(int port) {
 		analogSensor = new AnalogInput(port);
 	}
+	
 	//This next method has not been tested yet
-	public double getDistance()
-	{
+	public double getDistance() {
 		return analogSensor.getVoltage()/VOLTS_PER_INCH;
 	}
 	
