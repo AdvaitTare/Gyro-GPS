@@ -1,14 +1,15 @@
-package com.team503.lib.util;
+package gyro;
+
 import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.SPI;
 
-public class NavXGyro{  
+public class NavX_Gyro{  
     // Abstracted methods for Nav X Gyro
     public static AHRS ahrs;
   
 
-    private NavXGyro() {
+    private NavX_Gyro() {
     	
     	try { 
     		ahrs = new AHRS (SPI.Port.kMXP); 
@@ -27,4 +28,3 @@ public class NavXGyro{
     	return ahrs.getCompassHeading();
     }
 }
-
