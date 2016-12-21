@@ -8,13 +8,11 @@ import edu.wpi.first.wpilibj.AnalogInput;
  * 
  * This is the code for the ultrasonic sensors
  *=============================================================*/
-public class LVMaxSonarEZ4 
-{
+public class LVMaxSonarEZ4 {
 	private final double VOLTS_PER_INCH = 0.009766;
 	private AnalogInput analogSensor;
 	
-	public LVMaxSonarEZ4(int port)
-	{
+	public LVMaxSonarEZ4(int port) {
 		analogSensor = new AnalogInput(port);
 	}
 	//This next method has not been tested yet
