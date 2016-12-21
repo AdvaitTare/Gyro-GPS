@@ -4,12 +4,11 @@ import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.SPI;
 
-public class NavX_Gyro{  
+public class NavXGyro{  
     // Abstracted methods for Nav X Gyro
-    public static AHRS ahrs;
+    private static AHRS ahrs;
   
-
-    private NavX_Gyro() {
+    private NavXGyro() {
     	
     	try { 
     		ahrs = new AHRS (SPI.Port.kMXP); 
@@ -18,12 +17,21 @@ public class NavX_Gyro{
     		DriverStation.reportError("Error instantiating navX MXP:  " + ex.getMessage(), true);
     	}  	
     }
-    public void gyroReset() {
+    
+    private static final NavXGyro instance = new NavXGyro();
+
+    public NavXGyro getInstance(){
+    	return instance;
+    }
+    
+    public void reset() {
     	ahrs.reset();
     }
+    
     public double getAngle() {
     	return ahrs.getAngle();
     }
+    
     public double getHeading() {
     	return ahrs.getCompassHeading();
     }
